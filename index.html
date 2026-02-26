@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Canva Pro 18 Meses — Oferta Exclusiva</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --cyan: #00D4FF;
+      --pink: #FF3CAC;
+      --purple: #7B2FBE;
+      --dark: #0A0A0F;
+      --card: #12121A;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--dark); color: #fff; overflow-x: hidden; }
+    h1, h2, h3 { font-family: 'Syne', sans-serif; }
+
+    /* Background mesh */
+    .bg-mesh {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse 60% 50% at 10% 20%, rgba(123,47,190,0.25) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 90% 80%, rgba(0,212,255,0.18) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 30% at 50% 50%, rgba(255,60,172,0.1) 0%, transparent 70%);
+    }
+
+    /* Hero gradient text */
+    .gradient-text {
+      background: linear-gradient(135deg, var(--cyan) 0%, var(--pink) 50%, #FFB800 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    /* Glow button */
+    .btn-glow {
+      position: relative; display: inline-flex; align-items: center; gap: 10px;
+      padding: 16px 32px; border-radius: 50px; font-weight: 600; font-size: 1rem;
+      cursor: pointer; text-decoration: none; transition: all 0.3s ease;
+      background: linear-gradient(135deg, #00D4FF, #7B2FBE, #FF3CAC);
+      box-shadow: 0 0 30px rgba(0,212,255,0.3), 0 0 60px rgba(255,60,172,0.15);
+    }
+    .btn-glow:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(0,212,255,0.5), 0 0 80px rgba(255,60,172,0.3); }
+
+    .btn-whatsapp {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 28px; border-radius: 50px; font-weight: 600; font-size: 0.95rem;
+      cursor: pointer; text-decoration: none; transition: all 0.3s ease;
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+    }
+    .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(37,211,102,0.5); }
+
+    /* Price card */
+    .price-card {
+      background: linear-gradient(135deg, rgba(123,47,190,0.3), rgba(0,212,255,0.1));
+      border: 1px solid rgba(0,212,255,0.3);
+      border-radius: 24px; padding: 40px; position: relative; overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+    .price-card::before {
+      content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+      background: radial-gradient(circle, rgba(0,212,255,0.05) 0%, transparent 60%);
+      animation: rotateBg 8s linear infinite;
+    }
+    @keyframes rotateBg { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+    /* Feature badge */
+    .badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 6px 14px; border-radius: 20px; font-size: 0.82rem; font-weight: 600;
+      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    /* Resource card */
+    .resource-card {
+      background: var(--card); border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 20px; overflow: hidden; transition: all 0.3s ease;
+    }
+    .resource-card:hover { transform: translateY(-6px); border-color: rgba(0,212,255,0.3); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+
+    /* Feature list check */
+    .check-item { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
+    .check-icon { width: 22px; height: 22px; flex-shrink: 0; margin-top: 1px;
+      background: linear-gradient(135deg, #00D4FF, #7B2FBE); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; font-size: 11px; }
+
+    /* Testimonial */
+    .testimonial { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 24px; }
+
+    /* Section */
+    .section { position: relative; z-index: 1; }
+
+    /* Floating badge animation */
+    @keyframes float { 0%,100%{transform:translateY(0px)} 50%{transform:translateY(-8px)} }
+    .float-anim { animation: float 3s ease-in-out infinite; }
+
+    /* Divider */
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(0,212,255,0.4), rgba(255,60,172,0.4), transparent); }
+
+    /* Pulse */
+    @keyframes pulse-ring { 0%{transform:scale(0.9);opacity:1} 70%{transform:scale(1.3);opacity:0} 100%{opacity:0} }
+    .pulse { position: relative; }
+    .pulse::before { content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+      width:100%; height:100%; border-radius:inherit; border: 2px solid rgba(37,211,102,0.5);
+      animation: pulse-ring 2s ease-out infinite; }
+
+    /* Stats */
+    .stat-num { font-family: 'Syne', sans-serif; font-size: 3rem; font-weight: 800; }
+
+    /* Ticker */
+    .ticker-wrap { overflow: hidden; background: linear-gradient(135deg, rgba(0,212,255,0.1), rgba(255,60,172,0.1)); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .ticker { display: flex; gap: 0; white-space: nowrap; animation: ticker 20s linear infinite; }
+    .ticker-item { padding: 12px 40px; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; opacity: 0.7; }
+    @keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+    /* Scroll reveal */
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+<div class="bg-mesh"></div>
+
+<!-- NAVBAR -->
+<nav class="section sticky top-0 z-50 backdrop-blur-xl border-b border-white/5 bg-black/20">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-2">
+      <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:linear-gradient(135deg,#00D4FF,#7B2FBE)">
+        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+      </div>
+      <span class="font-bold text-white" style="font-family:'Syne',sans-serif">CanvaPro<span class="gradient-text">+</span></span>
+    </div>
+    <a href="https://wa.me/59170000000?text=Hola,%20quiero%20adquirir%20Canva%20Pro%2018%20meses" target="_blank" class="btn-whatsapp pulse text-white text-sm py-2 px-5">
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.121 1.533 5.845L.057 23.428l5.717-1.499A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.032-1.384l-.36-.214-3.733.979 1-3.636-.234-.374A9.796 9.796 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+      Comprar ahora
+    </a>
+  </div>
+</nav>
+
+<!-- TICKER -->
+<div class="ticker-wrap section">
+  <div class="ticker">
+    <span class="ticker-item">✦ Canva Pro 18 Meses</span><span class="ticker-item">✦ Diseños Ilimitados</span>
+    <span class="ticker-item">✦ 100M+ Recursos Premium</span><span class="ticker-item">✦ Solo Bs. 25</span>
+    <span class="ticker-item">✦ Envío Inmediato</span><span class="ticker-item">✦ Soporte 24/7</span>
+    <span class="ticker-item">✦ Canva Pro 18 Meses</span><span class="ticker-item">✦ Diseños Ilimitados</span>
+    <span class="ticker-item">✦ 100M+ Recursos Premium</span><span class="ticker-item">✦ Solo Bs. 25</span>
+    <span class="ticker-item">✦ Envío Inmediato</span><span class="ticker-item">✦ Soporte 24/7</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="section min-h-screen flex items-center justify-center text-center px-6 py-24">
+  <div class="max-w-4xl mx-auto">
+    <div class="inline-flex items-center gap-2 badge mb-6 float-anim">
+      <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+      Oferta activa — Plazas limitadas
+    </div>
+    <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+      Diseña sin límites con<br/>
+      <span class="gradient-text">Canva Pro</span><br/>
+      por 18 meses
+    </h1>
+    <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+      Accede a millones de plantillas premium, elimina fondos, genera imágenes con IA y lleva tus diseños al siguiente nivel — todo por un precio que no creerás.
+    </p>
+
+    <!-- PRICE CARDS -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
+      <!-- Bolivia -->
+      <div class="price-card relative text-center" style="min-width:200px">
+        <div class="text-xs uppercase tracking-widest text-cyan-400 mb-1 font-semibold">Bolivia</div>
+        <div class="stat-num gradient-text mb-1">Bs. 25</div>
+        <div class="text-gray-400 text-sm">18 meses completos</div>
+        <div class="mt-3 badge justify-center" style="background:rgba(0,212,255,0.1)">
+          🇧🇴 Pago local
+        </div>
+      </div>
+      <div class="hidden sm:flex flex-col items-center gap-2 text-gray-600">
+        <div class="w-px h-16" style="background:linear-gradient(to bottom, transparent, rgba(255,255,255,0.2), transparent)"></div>
+        <span class="text-xs">ó</span>
+        <div class="w-px h-16" style="background:linear-gradient(to bottom, transparent, rgba(255,255,255,0.2), transparent)"></div>
+      </div>
+      <!-- Internacional -->
+      <div class="price-card relative text-center" style="min-width:200px; border-color:rgba(255,60,172,0.4)">
+        <div class="text-xs uppercase tracking-widest text-pink-400 mb-1 font-semibold">Internacional</div>
+        <div class="stat-num" style="background:linear-gradient(135deg,#FF3CAC,#FFB800);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">$5</div>
+        <div class="text-gray-400 text-sm">18 meses completos</div>
+        <div class="mt-3 badge justify-center" style="background:rgba(255,60,172,0.1)">
+          🌎 USD / PayPal
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="https://wa.me/59170000000?text=Hola!%20Quiero%20adquirir%20Canva%20Pro%2018%20meses%20por%20Bs.%2025%20%F0%9F%87%A7%F0%9F%87%B4" target="_blank" class="btn-whatsapp text-white font-bold">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.121 1.533 5.845L.057 23.428l5.717-1.499A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.032-1.384l-.36-.214-3.733.979 1-3.636-.234-.374A9.796 9.796 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+        Comprar — Bolivia (Bs. 25)
+      </a>
+      <a href="https://wa.me/59170000000?text=Hello!%20I%20want%20to%20buy%20Canva%20Pro%2018%20months%20for%20%245%20%F0%9F%8C%8E" target="_blank" class="btn-whatsapp text-white font-bold" style="background:linear-gradient(135deg,#FF3CAC,#7B2FBE);box-shadow:0 4px 20px rgba(255,60,172,0.35)">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.121 1.533 5.845L.057 23.428l5.717-1.499A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.032-1.384l-.36-.214-3.733.979 1-3.636-.234-.374A9.796 9.796 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+        Buy — International ($5 USD)
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="section py-16 px-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="divider mb-16"></div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center reveal">
+      <div>
+        <div class="stat-num gradient-text">18</div>
+        <div class="text-gray-400 text-sm mt-1">Meses de acceso</div>
+      </div>
+      <div>
+        <div class="stat-num" style="background:linear-gradient(135deg,#FF3CAC,#FFB800);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">100M+</div>
+        <div class="text-gray-400 text-sm mt-1">Recursos premium</div>
+      </div>
+      <div>
+        <div class="stat-num" style="background:linear-gradient(135deg,#00D4FF,#25D366);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">∞</div>
+        <div class="text-gray-400 text-sm mt-1">Diseños ilimitados</div>
+      </div>
+      <div>
+        <div class="stat-num" style="background:linear-gradient(135deg,#7B2FBE,#00D4FF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">24/7</div>
+        <div class="text-gray-400 text-sm mt-1">Soporte WhatsApp</div>
+      </div>
+    </div>
+    <div class="divider mt-16"></div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section py-20 px-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-16 reveal">
+      <div class="badge mb-4">¿Qué incluye?</div>
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Todo lo que Canva Pro <span class="gradient-text">te da</span></h2>
+      <p class="text-gray-400 max-w-xl mx-auto">Una sola suscripción, posibilidades infinitas. Esto es lo que obtienes desde el primer día.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6 reveal">
+      <div style="background:rgba(0,212,255,0.04);border:1px solid rgba(0,212,255,0.12)" class="rounded-2xl p-8">
+        <div class="text-3xl mb-4">🎨</div>
+        <h3 class="text-xl font-bold mb-3">Plantillas Premium Exclusivas</h3>
+        <p class="text-gray-400 leading-relaxed">Más de 610,000 plantillas profesionales para redes sociales, presentaciones, flyers, logos, videos y mucho más. Diseñadas por expertos.</p>
+      </div>
+      <div style="background:rgba(255,60,172,0.04);border:1px solid rgba(255,60,172,0.12)" class="rounded-2xl p-8">
+        <div class="text-3xl mb-4">🤖</div>
+        <h3 class="text-xl font-bold mb-3">IA Integrada — Magic Studio</h3>
+        <p class="text-gray-400 leading-relaxed">Genera imágenes con texto, elimina fondos en un clic, expande imágenes con Magic Expand y edita con comandos de voz. El futuro del diseño ya está aquí.</p>
+      </div>
+      <div style="background:rgba(123,47,190,0.04);border:1px solid rgba(123,47,190,0.2)" class="rounded-2xl p-8">
+        <div class="text-3xl mb-4">📦</div>
+        <h3 class="text-xl font-bold mb-3">100M+ Fotos, Videos y Audios</h3>
+        <p class="text-gray-400 leading-relaxed">Biblioteca premium con millones de imágenes, videoclips y pistas de audio libres de derechos. Todo en un solo lugar, sin costos adicionales.</p>
+      </div>
+      <div style="background:rgba(255,184,0,0.04);border:1px solid rgba(255,184,0,0.15)" class="rounded-2xl p-8">
+        <div class="text-3xl mb-4">☁️</div>
+        <h3 class="text-xl font-bold mb-3">1TB de Almacenamiento</h3>
+        <p class="text-gray-400 leading-relaxed">Guarda todos tus proyectos en la nube con acceso desde cualquier dispositivo. Comparte y colabora con tu equipo en tiempo real sin complicaciones.</p>
+      </div>
+    </div>
+
+    <!-- Additional features list -->
+    <div class="mt-8 grid md:grid-cols-3 gap-4 reveal">
+      <div class="check-item"><div class="check-icon">✓</div><span class="text-gray-300 text-sm">Kit de marca personalizado</span></div>
+      <div class="check-item"><div class="check-icon">✓</div><span class="text-gray-300 text-sm">Exportación en PDF de alta calidad</span></div>
+      <div class="check-item"><div class="check-icon">✓</div><span class="text-gray-300 text-sm">Programación de redes sociales</span></div>
+      <div class="check-item"><div class="check-icon">✓</div><span class="text-gray-300 text-sm">Editor de video y animaciones</span></div>
+      <div class="check-item"><div class="check-icon">✓</div><span class="text-gray-300 text-sm">Fondo transparente en imágenes</span></div>
+      <div class="check-item"><div class="check-icon">✓</div><span class="text-gray-300 text-sm">Herramientas de presentación</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXTRA RESOURCES CARDS -->
+<section class="section py-20 px-6" id="recursos">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-16 reveal">
+      <div class="badge mb-4">Bonus exclusivo</div>
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Recursos <span class="gradient-text">Extra</span> para ti</h2>
+      <p class="text-gray-400 max-w-xl mx-auto">Más que una suscripción. Al adquirir tu plan accedes a recursos y conocimiento que potencian tu crecimiento creativo y profesional.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 reveal">
+
+      <!-- CARD 1: Recursos Canva -->
+      <div class="resource-card">
+        <div class="h-3" style="background:linear-gradient(90deg,#00D4FF,#7B2FBE)"></div>
+        <div class="p-8">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl" style="background:linear-gradient(135deg,rgba(0,212,255,0.2),rgba(123,47,190,0.2));border:1px solid rgba(0,212,255,0.3)">🎁</div>
+            <div>
+              <h3 class="text-xl font-bold">Recursos de Canva</h3>
+              <span class="text-cyan-400 text-xs font-semibold uppercase tracking-wide">Pack exclusivo</span>
+            </div>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6">Plantillas curadas, elementos gráficos, paletas de colores, paquetes de fuentes premium y kits de diseño listos para usar. Ahorra horas de trabajo y crea resultados profesionales desde el día uno.</p>
+          <ul class="space-y-2 mb-8">
+            <li class="flex items-center gap-2 text-sm text-gray-300"><span class="text-cyan-400">→</span> +200 plantillas por categoría</li>
+            <li class="flex items-center gap-2 text-sm text-gray-300"><span class="text-cyan-400">→</span> Packs de iconos y elementos SVG</li>
+            <li class="flex items-center gap-2 text-sm text-gray-300"><span class="text-cyan-400">→</span> Guías de estilo y branding</li>
+            <li class="flex items-center gap-2 text-sm text-gray-300"><span class="text-cyan-400">→</span> Paletas y tipografías tendencia</li>
+          </ul>
+          <a href="https://wa.me/59170000000?text=Hola!%20Me%20interesan%20los%20Recursos%20de%20Canva%20%F0%9F%8E%A8%20%C2%BFc%C3%B3mo%20los%20obtengo%3F" target="_blank" class="btn-whatsapp text-white text-sm w-full justify-center">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.121 1.533 5.845L.057 23.428l5.717-1.499A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.032-1.384l-.36-.214-3.733.979 1-3.636-.234-.374A9.796 9.796 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+            Quiero los Recursos de Canva
+          </a>
+        </div>
+      </div>
+
+      <!-- CARD 2: Cursos -->
+      <div class="resource-card">
+        <div class="h-3" style="background:linear-gradient(90deg,#FF3CAC,#FFB800)"></div>
+        <div class="p-8">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl" style="background:linear-gradient(135deg,rgba(255,60,172,0.2),rgba(255,184,0,0.15));border:1px solid rgba(255,60,172,0.3)">🚀</div>
+            <div>
+              <h3 class="text-xl font-bold">Cursos de Canva & Emprendimiento</h3>
+              <span class="text-pink-400 text-xs font-semibold uppercase tracking-wide">Conocimiento que vende</span>
+            </div>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6">Aprende a dominar Canva desde cero hasta nivel avanzado, y descubre cómo usarlo para impulsar tu negocio. Cursos prácticos, directos y aplicables desde el primer día.</p>
+          <ul class="space-y-2 mb-8">
+            <li class="flex items-center gap-2 text-sm text-gray-300"><span class="text-pink-400">→</span> Canva básico al avanzado</li>
+            <li class="flex items-center gap-2 text-sm text-gray-300"><span class="text-pink-400">→</span> Diseño para redes sociales</li>
+            <li class="flex items-center gap-2 text-sm text-gray-300"><span class="text-pink-400">→</span> Cómo vender diseños con Canva</li>
+            <li class="flex items-center gap-2 text-sm text-gray-300"><span class="text-pink-400">→</span> Emprendimiento digital desde cero</li>
+          </ul>
+          <a href="https://wa.me/59170000000?text=Hola!%20Me%20interesan%20los%20Cursos%20de%20Canva%20y%20Emprendimiento%20%F0%9F%9A%80%20%C2%BFqu%C3%A9%20incluyen%3F" target="_blank" class="btn-whatsapp text-white text-sm w-full justify-center" style="background:linear-gradient(135deg,#FF3CAC,#FFB800);box-shadow:0 4px 20px rgba(255,60,172,0.35)">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.121 1.533 5.845L.057 23.428l5.717-1.499A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.032-1.384l-.36-.214-3.733.979 1-3.636-.234-.374A9.796 9.796 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+            Quiero los Cursos
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section py-20 px-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-12 reveal">
+      <h2 class="text-4xl font-extrabold mb-3">Lo que dicen nuestros <span class="gradient-text">clientes</span></h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6 reveal">
+      <div class="testimonial">
+        <div class="flex gap-1 mb-3">⭐⭐⭐⭐⭐</div>
+        <p class="text-gray-300 text-sm leading-relaxed mb-4">"Increíble inversión. Por menos de lo que cuesta un café al mes tengo Canva Pro completo. Mis publicaciones cambiaron totalmente."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold" style="background:linear-gradient(135deg,#00D4FF,#7B2FBE)">ML</div>
+          <div><div class="text-sm font-semibold">María L.</div><div class="text-gray-500 text-xs">Emprendedora 🇧🇴</div></div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="flex gap-1 mb-3">⭐⭐⭐⭐⭐</div>
+        <p class="text-gray-300 text-sm leading-relaxed mb-4">"Compré la suscripción y en menos de 10 minutos ya tenía todo activado. El soporte por WhatsApp es muy rápido. 100% recomendado."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold" style="background:linear-gradient(135deg,#FF3CAC,#FFB800)">CR</div>
+          <div><div class="text-sm font-semibold">Carlos R.</div><div class="text-gray-500 text-xs">Diseñador freelance 🇧🇴</div></div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="flex gap-1 mb-3">⭐⭐⭐⭐⭐</div>
+        <p class="text-gray-300 text-sm leading-relaxed mb-4">"I'm in Venezuela and bought the international plan. $5 for 18 months is unbeatable. Templates are amazing for my business content."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold" style="background:linear-gradient(135deg,#7B2FBE,#00D4FF)">AP</div>
+          <div><div class="text-sm font-semibold">Ana P.</div><div class="text-gray-500 text-xs">Content creator 🌎</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section py-20 px-6">
+  <div class="max-w-3xl mx-auto reveal">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-extrabold mb-3">Preguntas <span class="gradient-text">frecuentes</span></h2>
+    </div>
+    <div class="space-y-4">
+      <details class="group" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px">
+        <summary class="flex justify-between items-center p-5 cursor-pointer font-semibold">
+          ¿Cómo recibo mi suscripción?
+          <span class="text-cyan-400 text-xl group-open:rotate-45 transition-transform">+</span>
+        </summary>
+        <p class="px-5 pb-5 text-gray-400 text-sm leading-relaxed">Una vez realices el pago te enviamos las credenciales de acceso por WhatsApp en menos de 30 minutos. Es un proceso rápido y sencillo.</p>
+      </details>
+      <details class="group" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px">
+        <summary class="flex justify-between items-center p-5 cursor-pointer font-semibold">
+          ¿Puedo usar Canva Pro en todos mis dispositivos?
+          <span class="text-cyan-400 text-xl group-open:rotate-45 transition-transform">+</span>
+        </summary>
+        <p class="px-5 pb-5 text-gray-400 text-sm leading-relaxed">Sí, puedes acceder desde tu computador, tablet y celular. La cuenta es de acceso completo con todas las funciones premium activas.</p>
+      </details>
+      <details class="group" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px">
+        <summary class="flex justify-between items-center p-5 cursor-pointer font-semibold">
+          ¿Cómo pago desde el exterior?
+          <span class="text-cyan-400 text-xl group-open:rotate-45 transition-transform">+</span>
+        </summary>
+        <p class="px-5 pb-5 text-gray-400 text-sm leading-relaxed">Aceptamos PayPal y otras billeteras digitales internacionales. Escríbenos por WhatsApp y te indicamos el método más conveniente para tu país.</p>
+      </details>
+      <details class="group" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px">
+        <summary class="flex justify-between items-center p-5 cursor-pointer font-semibold">
+          ¿Qué pasa cuando venzan los 18 meses?
+          <span class="text-cyan-400 text-xl group-open:rotate-45 transition-transform">+</span>
+        </summary>
+        <p class="px-5 pb-5 text-gray-400 text-sm leading-relaxed">Te avisamos antes de que venza para que puedas renovar. Nuestros clientes tienen prioridad en renovaciones y siempre mantenemos los mismos precios accesibles.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section py-24 px-6">
+  <div class="max-w-3xl mx-auto text-center reveal">
+    <div class="price-card" style="background:linear-gradient(135deg,rgba(0,212,255,0.08),rgba(255,60,172,0.08));border-color:rgba(0,212,255,0.2)">
+      <div class="text-5xl mb-6">🎨</div>
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4">¿Listo para diseñar <span class="gradient-text">sin límites</span>?</h2>
+      <p class="text-gray-300 mb-8 text-lg">Únete a cientos de creadores y emprendedores que ya aprovechan Canva Pro al máximo por un precio increíble.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://wa.me/59170000000?text=Hola!%20Quiero%20adquirir%20Canva%20Pro%2018%20meses%20por%20Bs.%2025%20%F0%9F%87%A7%F0%9F%87%B4" target="_blank" class="btn-whatsapp text-white font-bold pulse">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.121 1.533 5.845L.057 23.428l5.717-1.499A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.032-1.384l-.36-.214-3.733.979 1-3.636-.234-.374A9.796 9.796 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+          Comprar Bolivia — Bs. 25
+        </a>
+        <a href="https://wa.me/59170000000?text=Hello!%20I%20want%20to%20buy%20Canva%20Pro%2018%20months%20for%20%245%20USD" target="_blank" class="btn-whatsapp text-white font-bold" style="background:linear-gradient(135deg,#FF3CAC,#7B2FBE);box-shadow:0 4px 20px rgba(255,60,172,0.35)">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.121 1.533 5.845L.057 23.428l5.717-1.499A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.032-1.384l-.36-.214-3.733.979 1-3.636-.234-.374A9.796 9.796 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+          International — $5 USD
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="section border-t border-white/5 py-8 px-6 text-center">
+  <p class="text-gray-600 text-sm">© 2025 CanvaPro+ · Todos los derechos reservados · Atención por WhatsApp 24/7</p>
+</footer>
+
+<!-- Scroll Reveal Script -->
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 120);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
